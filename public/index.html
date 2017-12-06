@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Guitar Practice</title>
+	<link rel="icon" type="image/x-icon" href="/favicon-music.ico">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/styles/style.css">
+</head>
+<body>
+	<div class="vertical-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<form id="day-progress" action="/add/day-progress" method="post">
+						<h3 class="heading">Today's Progress</h3>
+						<div class="form-group form-row">
+							<label class="col-sm-2 col-form-label">Date</label>
+							<div class="col">
+								<input class="form-control" type="text" placeholder="DD" name="day">
+							</div>
+							<div class="col">
+								<input class="form-control" type="text" placeholder="MM" name="month">
+							</div>
+							<div class="col">
+								<input class="form-control" type="text" placeholder="YYYY" name="year">
+							</div>
+						</div><!-- .form-group -->
+						<div class="form-group form-row">
+							<label class="col-sm-2 col-form-label">Song</label>
+							<div class="col-sm-10">
+								<ul class="list-unstyled form-list">
+									<li><input class="form-control" type="text" placeholder="Name" name="songName"></li>
+									<li><input class="form-control" type="text" placeholder="Artist" name="songArtist"></li>
+									<li><input class="form-control" type="text" placeholder="Style" name="songStyle"></li>
+									<li><input class="form-control" type="text" placeholder="Max BPM" name="songMaxBPM"></li>
+								</ul>
+							</div>
+						</div><!-- .form-group -->
+						<div class="form-group form-row">
+							<label class="col-sm-2 col-form-label">Scales</label>
+							<div class="col-sm-10">
+								
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="custom-control custom-checkbox">
+								<input id="day-video" class="custom-control-input" type="checkbox" name="videoDay" value="true">
+								<span class="custom-control-indicator"></span>
+								<span class="custom-control-description">Video Day</span>
+							</label>
+						</div><!-- .form-group -->
+						<button type="submit" class="btn btn-warning">Submit</button>
+						<button type="reset" class="btn btn-warning">Reset</button>
+					</form>
+				</div><!-- .col-md-8 -->
+				<div class="col-md-2"></div>
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</div>
+</body>
+</html>
