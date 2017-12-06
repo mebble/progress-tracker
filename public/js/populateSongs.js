@@ -1,6 +1,6 @@
-$.getJSON("/get-songs", (songs) => {
+$.getJSON("/song-names", (names) => {
 	const $songSelect = $("#song-select");
-	songs.forEach((song) => {
-		$songSelect.append(`<option>${song.name}</option>`);
+	names.forEach((name) => {
+		$songSelect.append(`<option>${name}</option>`);
 	});
 });

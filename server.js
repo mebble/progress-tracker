@@ -23,6 +23,7 @@ app.post('/add/day-progress', (req, res) => {
 	res.end();
 });
 
-app.get('/get-songs', (req, res) => {
-	res.send(songs);
+app.get('/song-names', (req, res) => {
+	const names = songs.map(song => song.name);
+	res.send(names);
 });
