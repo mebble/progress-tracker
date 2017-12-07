@@ -11,12 +11,14 @@
 	margin-bottom: 30px;
 }
 
-.form-list li {
-	padding: 5px 0px;
-}
-
 form#day-progress label {
 	font-weight: bolder;
+}
+
+form#day-progress > div {
+	padding: 20px;
+	border: 1px solid #9c9c9c;
+	border-radius: 5px;
 }
 
 @media (min-width: 576px) {
