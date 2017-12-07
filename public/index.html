@@ -29,18 +29,67 @@
 									<input class="form-control" type="text" placeholder="YYYY" name="year">
 								</div>
 							</div>
-						</div>
+						</div><!-- date group -->
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label>Song</label>
-								<select class="form-control" id="song-select">
-								</select>
+								<select class="form-control" id="song-select"></select>
 							</div>
 							<div class="form-group col-md-6">
 								<label>Maximum BPM</label>
 								<input class="form-control" type="text" name="">
 							</div>
-						</div>
+						</div><!-- song group -->
+						<div class="form-group">
+							<div class="form-row">
+								<div class="form-group col-md-4">
+									<label>Scale</label>
+									<select class="form-control">
+										<option>diatonic</option>
+										<option>pentatonic</option>
+									</select>
+								</div>
+								<div class="form-group col-md-4">
+									<label>Mode</label>
+									<select class="form-control">
+										<option>ionian</option>
+										<option>dorian</option>
+										<option>phrygian</option>
+										<option>lydian</option>
+										<option>mixolydian</option>
+										<option>aeolian</option>
+										<option>locrian</option>
+									</select>
+								</div>
+								<div class="form-group col-md-4">
+									<label>Shape</label>
+									<select class="form-control">
+										<option>high</option>
+										<option>low</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label>BPM bounds</label>
+									<br>
+									From
+									<input class="form-control" type="text" name="">
+									to
+									<input class="form-control" type="text" name="">
+									BPM
+								</div>
+								<div class="form-group col-md-6">
+									<label>BPM increment</label>
+									<br>
+									Increment by
+									<input class="form-control" type="text" name="">
+									BPM every
+									<input class="form-control" type="text" name="">
+									bars
+								</div>
+							</div>
+						</div><!-- scale group -->
 						<div class="form-group">
 							<label class="custom-control custom-checkbox">
 								<input class="custom-control-input" type="checkbox" name="videoDay" value="true">
