@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 $.getJSON("/song-names", (names) => {
 	const $songSelect = $("#song-select");
 	names.forEach((name) => {
@@ -10,4 +12,6 @@ $.getJSON("/exercise-names", (names) => {
 	names.forEach((name) => {
 		$exerciseSelect.append(`<option>${name}</option>`);
 	});
+});
+
 });
