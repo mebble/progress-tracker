@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 // load json data
 const songs = require('./data/songs.json');
+const exercises = require('./data/exercises.json');
 
 const app = express();
 const port = 3000;
@@ -25,5 +26,10 @@ app.post('/add/day-progress', (req, res) => {
 
 app.get('/song-names', (req, res) => {
 	const names = songs.map(song => song.name);
+	res.send(names);
+});
+
+app.get('/exercise-names', (req, res) => {
+	const names = exercises.map(exercise => exercise.name);
 	res.send(names);
 });
