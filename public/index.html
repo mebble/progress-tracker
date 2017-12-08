@@ -20,13 +20,13 @@
 							<label>Date</label>
 							<div class="form-row">
 								<div class="col">
-									<input class="form-control" type="text" placeholder="DD" name="day">
+									<input class="form-control default" type="text" placeholder="DD" name="day">
 								</div>
 								<div class="col">
-									<input class="form-control" type="text" placeholder="MM" name="month">
+									<input class="form-control default" type="text" placeholder="MM" name="month">
 								</div>
 								<div class="col">
-									<input class="form-control" type="text" placeholder="YYYY" name="year">
+									<input class="form-control default" type="text" placeholder="YYYY" name="year">
 								</div>
 							</div>
 						</div><!-- date group -->
@@ -76,10 +76,10 @@
 									<label>BPM bounds</label>
 									<div class="form-row">
 										<div class="col">
-											<input class="form-control" type="text" placeholder="Min" name="">
+											<input class="form-control" type="text" placeholder="Min" name="scaleMinbpm">
 										</div>
 										<div class="col">
-											<input class="form-control" type="text" placeholder="Max" name="">
+											<input class="form-control" type="text" placeholder="Max" name="scaleMaxbpm">
 										</div>
 									</div>
 								</div>
@@ -87,14 +87,14 @@
 									<label>BPM increment</label>
 									<div class="form-row">
 										<div class="col">
-											<input class="form-control" type="text" placeholder="Inc amount" name="">
+											<input class="form-control default" type="text" placeholder="Inc amount" name="scaleIncbpm">
 										</div>
 										<div class="col">
-											<input class="form-control" type="text" placeholder="Bar interval" name="">
+											<input class="form-control default" type="text" placeholder="Bar interval" name="scaleIncbar">
 										</div>
 									</div>
 								</div>
-							</div>
+							</div><!-- BPM row -->
 						</div><!-- scale group -->
 						<div class="form-group">
 							<div class="form-row">
@@ -108,10 +108,10 @@
 									<label>BPM bounds</label>
 									<div class="form-row">
 										<div class="col">
-											<input class="form-control" type="text" placeholder="Min" name="">
+											<input class="form-control" type="text" placeholder="Min" name="exerciseMinbpm">
 										</div>
 										<div class="col">
-											<input class="form-control" type="text" placeholder="Max" name="">
+											<input class="form-control" type="text" placeholder="Max" name="exerciseMaxbpm">
 										</div>
 									</div>
 								</div>
@@ -119,14 +119,14 @@
 									<label>BPM increment</label>
 									<div class="form-row">
 										<div class="col">
-											<input class="form-control" type="text" placeholder="Inc amount" name="">
+											<input class="form-control default" type="text" placeholder="Inc amount" name="exerciseIncbpm">
 										</div>
 										<div class="col">
-											<input class="form-control" type="text" placeholder="Bar interval" name="">
+											<input class="form-control default" type="text" placeholder="Bar interval" name="exerciseIncbar">
 										</div>
 									</div>
 								</div>
-							</div>
+							</div><!-- BPM row -->
 						</div><!-- exercise group -->
 						<div class="form-group">
 							<label class="custom-control custom-checkbox">
@@ -145,5 +145,6 @@
 	</div><!-- .vertical-center -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/getSelectItems.js"></script>
+	<script src="js/setDefaults.js"></script>
 </body>
 </html>
