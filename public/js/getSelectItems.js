@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(() => {
 
 $.getJSON("/song-names", (names) => {
 	const $songSelect = $("#song-select");

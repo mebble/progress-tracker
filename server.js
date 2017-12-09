@@ -19,9 +19,14 @@ app.use(bodyParser.urlencoded({
 })); // support encoded bodies
 app.use(express.static('public'));
 
-app.post('/add/day-progress', (req, res) => {
-	console.log(JSON.stringify(req.body, null, 4));
-	res.end();
+app.post('/add/daily-session', (req, res) => {
+	console.log('Request body:\n' + JSON.stringify(req.body, null, 4));
+
+	res.contentType('json');
+	res.send({
+		status: 'success',
+		message: 'Daily practice session data received'
+	});
 });
 
 app.get('/song-names', (req, res) => {
