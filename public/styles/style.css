@@ -11,18 +11,18 @@
 	margin-bottom: 30px;
 }
 
-form#day-progress label {
+form#daily-session-form label {
 	font-weight: bolder;
 }
 
-form#day-progress > div {
+form#daily-session-form > div {
 	padding: 20px;
 	border: 1px solid #9c9c9c;
 	border-radius: 5px;
 }
 
 @media (min-width: 576px) {
-	form#day-progress .heading {
+	form#daily-session-form .heading {
 		margin-bottom: 30px;
 	}
 }
