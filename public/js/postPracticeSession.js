@@ -23,7 +23,8 @@ $("#daily-session-form").submit((e) => {
 		exerciseIncbpm: $("[name='exerciseIncbpm']").val(),
 		exerciseIncbar: $("[name='exerciseIncbar']").val(),
 
-		videoDay: $("[name='videoDay']").is(":checked")
+		videoDay: $("[name='videoDay']").is(":checked"),
+		minutes: $("[name='minutes']").val()
 	};
 
 	$.post("/add/daily-session", sessionData, (res) => {

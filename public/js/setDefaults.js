@@ -2,6 +2,7 @@ $(document).ready(() => {
 
 setDefaultDate();
 setDefaultBpmInc();
+$(".default[name='minutes']").val(50);
 
 });
 
@@ -18,10 +19,10 @@ function setDefaultDate() {
 }
 
 function setDefaultBpmInc() {
-	$(".default[name='scaleIncbpm']").val(5)
-	$(".default[name='exerciseIncbpm']").val(5)
-	$(".default[name='scaleIncbar']").val(8)
-	$(".default[name='exerciseIncbar']").val(8)
+	$(".default[name='scaleIncbpm']").val(5);
+	$(".default[name='exerciseIncbpm']").val(5);
+	$(".default[name='scaleIncbar']").val(8);
+	$(".default[name='exerciseIncbar']").val(8);
 }
 
 function fixZero(arg) {

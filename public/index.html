@@ -129,12 +129,22 @@
 							</div><!-- BPM row -->
 						</div><!-- exercise group -->
 						<div class="form-group">
-							<label class="custom-control custom-checkbox">
-								<input class="custom-control-input" type="checkbox" name="videoDay">
-								<span class="custom-control-indicator"></span>
-								<span class="custom-control-description">Video Day</span>
-							</label>
-						</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label class="custom-control custom-checkbox">
+										<input class="custom-control-input" type="checkbox" name="videoDay">
+										<span class="custom-control-indicator"></span>
+										<span class="custom-control-description">Video Day</span>
+									</label>
+								</div>
+								<div class="form-group row col-md-6">
+									<label class="col col-form-label">Minutes spent</label>
+									<div class="col">
+										<input class="form-control default" type="text" name="minutes">
+									</div>
+								</div>
+							</div>
+						</div><!-- misc group -->
 						<button type="submit" class="btn btn-warning">Submit</button>
 						<button type="reset" class="btn btn-warning">Reset</button>
 					</form>
