@@ -5,16 +5,24 @@ $("#daily-session-form").submit((e) => {
 		day: $("[name='day']").val(),
 		month: $("[name='month']").val(),
 		year: $("[name='year']").val(),
+
 		song: $("[name='song']").val(),
 		songMaxbpm: $("[name='songMaxbpm']").val(),
+
+		scale: $("[name='scale']").val(),
+		mode: $("[name='mode']").val(),
+		shape: $("[name='shape']").val(),
 		scaleMinbpm: $("[name='scaleMinbpm']").val(),
 		scaleMaxbpm: $("[name='scaleMaxbpm']").val(),
 		scaleIncbpm: $("[name='scaleIncbpm']").val(),
 		scaleIncbar: $("[name='scaleIncbar']").val(),
+
+		exercise: $("[name='exercise']").val(),
 		exerciseMinbpm: $("[name='exerciseMinbpm']").val(),
 		exerciseMaxbpm: $("[name='exerciseMaxbpm']").val(),
 		exerciseIncbpm: $("[name='exerciseIncbpm']").val(),
 		exerciseIncbar: $("[name='exerciseIncbar']").val(),
+
 		videoDay: $("[name='videoDay']").is(":checked")
 	};
 
