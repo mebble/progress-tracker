@@ -2,6 +2,7 @@
 const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
+const daily = require('./daily');
 
 // load json data
 const songs = require('./data/songs.json');
@@ -21,6 +22,7 @@ app.use(express.static('public'));
 
 app.post('/add/daily-session', (req, res) => {
 	console.log('Request body:\n' + JSON.stringify(req.body, null, 4));
+	daily.updateDaily(req.body);
 
 	res.contentType('json');
 	res.send({
