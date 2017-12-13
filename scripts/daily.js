@@ -1,4 +1,4 @@
-const dailyPractice = require('./data/daily-practice.json');
+const dailyPractice = require('../data/daily-practice.json');
 const fs = require('fs');
 
 function updateDaily(session) {

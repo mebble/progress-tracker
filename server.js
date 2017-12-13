@@ -2,7 +2,7 @@
 const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
-const daily = require('./daily');
+const daily = require('./scripts/daily');
 
 // load json data
 const songs = require('./data/songs.json');
