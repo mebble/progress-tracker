@@ -23,6 +23,8 @@ $("#daily-session-form").submit((e) => {
 		exerciseIncbpm: $("[name='exerciseIncbpm']").val(),
 		exerciseIncbar: $("[name='exerciseIncbar']").val(),
 
+		chords: $("#chord-group input").map((i, input) => $(input).val()).toArray(),
+
 		videoDay: $("[name='videoDay']").is(":checked"),
 		minutes: $("[name='minutes']").val()
 	};

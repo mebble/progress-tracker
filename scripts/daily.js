@@ -29,6 +29,7 @@ function updateDaily(session) {
 				incbar: Number(session.exerciseIncbar)
 			}
 		],
+		chords: session.chords,
 		minutes: Number(session.minutes),
 		videoDay: JSON.parse(session.videoDay)
 	};

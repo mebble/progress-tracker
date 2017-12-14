@@ -16,7 +16,7 @@
 				<div class="col-md-8">
 					<form id="daily-session-form">
 						<h3 class="heading">Today's Progress</h3>
-						<div class="form-group">
+						<div id="date-group" class="form-group">
 							<label>Date</label>
 							<div class="form-row">
 								<div class="col">
@@ -30,7 +30,7 @@
 								</div>
 							</div>
 						</div><!-- date group -->
-						<div class="form-group">
+						<div id="song-group" class="form-group">
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label>Song</label>
@@ -42,7 +42,7 @@
 								</div>
 							</div>
 						</div><!-- song group -->
-						<div class="form-group">
+						<div id="scale-group" class="form-group">
 							<div class="form-row">
 								<div class="form-group col-md-4">
 									<label>Scale</label>
@@ -96,7 +96,7 @@
 								</div>
 							</div><!-- BPM row -->
 						</div><!-- scale group -->
-						<div class="form-group">
+						<div id="exercise-group" class="form-group">
 							<div class="form-row">
 								<div class="form-group col">
 									<label>Exercise</label>
@@ -128,7 +128,21 @@
 								</div>
 							</div><!-- BPM row -->
 						</div><!-- exercise group -->
-						<div class="form-group">
+						<div id="chord-group" class="form-group">
+							<label>Chords</label>
+							<div class="form-row">
+								<div class="col">
+									<input class="form-control" type="text" placeholder="First" name="chordOne">
+								</div>
+								<div class="col">
+									<input class="form-control" type="text" placeholder="Second" name="chordTwo">
+								</div>
+								<div class="col">
+									<input class="form-control" type="text" placeholder="Third" name="chordThree">
+								</div>
+							</div>
+						</div><!-- chord group -->
+						<div id="misc-group" class="form-group">
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label class="custom-control custom-checkbox">
