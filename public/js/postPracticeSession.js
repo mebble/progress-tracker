@@ -1,37 +1,53 @@
 $(document).ready(() => {
 
 $("#daily-session-form").submit((e) => {
+	const day = fixZero($("[name='day']").val());
+	const month = fixZero($("[name='month']").val());
+	const year = $("[name='year']").val();
+
+	const scale = $("[name='scale']").val();
+	const mode = $("[name='mode']").val();
+
 	const sessionData = {
-		day: $("[name='day']").val(),
-		month: $("[name='month']").val(),
-		year: $("[name='year']").val(),
-
-		song: $("[name='song']").val(),
-		songMaxbpm: $("[name='songMaxbpm']").val(),
-
-		scale: $("[name='scale']").val(),
-		mode: $("[name='mode']").val(),
-		shape: $("[name='shape']").val(),
-		scaleMinbpm: $("[name='scaleMinbpm']").val(),
-		scaleMaxbpm: $("[name='scaleMaxbpm']").val(),
-		scaleIncbpm: $("[name='scaleIncbpm']").val(),
-		scaleIncbar: $("[name='scaleIncbar']").val(),
-
-		exercise: $("[name='exercise']").val(),
-		exerciseMinbpm: $("[name='exerciseMinbpm']").val(),
-		exerciseMaxbpm: $("[name='exerciseMaxbpm']").val(),
-		exerciseIncbpm: $("[name='exerciseIncbpm']").val(),
-		exerciseIncbar: $("[name='exerciseIncbar']").val(),
-
+		date: `${year}-${month}-${day}`,
+		songs: [
+			{
+				name: $("[name='song']").val(),
+				maxbpm: Number($("[name='songMaxbpm']").val())
+			}
+		],
+		scales: [
+			{
+				mode: `${scale}-${mode}`,
+				shape: $("[name='shape']").val(),
+				minbpm: Number($("[name='scaleMinbpm']").val()),
+				maxbpm: Number($("[name='scaleMaxbpm']").val()),
+				incbpm: Number($("[name='scaleIncbpm']").val()),
+				incbar: Number($("[name='scaleIncbar']").val())
+			}
+		],
+		exercises: [
+			{
+				name: $("[name='exercise']").val(),
+				minbpm: Number($("[name='exerciseMinbpm']").val()),
+				maxbpm: Number($("[name='exerciseMaxbpm']").val()),
+				incbpm: Number($("[name='exerciseIncbpm']").val()),
+				incbar: Number($("[name='exerciseIncbar']").val())
+			}
+		],
 		chords: $("#chord-group input").map((i, input) => $(input).val()).toArray(),
+		minutes: Number($("[name='minutes']").val()),
+		videoDay: JSON.parse($("[name='videoDay']").is(":checked"))
+	}
 
-		videoDay: $("[name='videoDay']").is(":checked"),
-		minutes: $("[name='minutes']").val()
-	};
-
-	$.post("/add/daily-session", sessionData, (res) => {
-		console.log(res);
-	}, "json");
+	$.ajax({
+		url: "/add/daily-session",
+		method: "POST",
+		data: JSON.stringify(sessionData),
+		contentType: "application/json; charset=UTF-8",
+		dataType: "json",
+		success: res => console.log(res)
+	});
 	e.preventDefault();
 });
 
