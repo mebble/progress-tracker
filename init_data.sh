@@ -84,6 +84,6 @@ do
 		[Nn]* )
 			exit;;
 		* )
-			read -p "It's a yes/no question. " res
+			read -p "It's a yes/no question. " res;;
 	esac
 done
