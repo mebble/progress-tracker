@@ -1,10 +1,10 @@
-const dailyPractice = require('../data/daily-practice.json');
+const sessions = require('../data/sessions.json');
 const fs = require('fs');
 
 function updateDaily(session) {
-	dailyPractice.push(session);
+	sessions.push(session);
 
-	fs.writeFile('./data/daily-practice.json', JSON.stringify(dailyPractice, null, '\t'), (err) => {
+	fs.writeFile('./data/sessions.json', JSON.stringify(sessions, null, '\t'), (err) => {
 		if (err) throw err;
 		console.log('Write successful!');
 	});
