@@ -25,13 +25,24 @@ app.use(express.static('public'));
 
 app.post('/add/daily-session', (req, res) => {
 	console.log('Request body:\n' + JSON.stringify(req.body, null, 4));
-	daily.update(req.body, sessionsPath);
 
-	res.contentType('json');
-	res.send({
-		status: 'success',
-		message: 'Daily practice session data received'
-	});
+	try {
+		daily.update(req.body, sessionsPath);
+
+		console.log('Write successful!');
+		res.contentType('json');
+		res.send({
+			status: 'success',
+			message: 'Data successfully received'
+		});
+	} catch (err) {
+		console.log('Write failed!');
+		res.contentType('json');
+		res.send({
+			status: 'failure',
+			message: 'Sorry, but a server error occurred'
+		});
+	}
 });
 
 app.get('/song-names', (req, res) => {
