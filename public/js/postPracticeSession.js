@@ -46,9 +46,21 @@ $("#daily-session-form").submit((e) => {
 		data: JSON.stringify(sessionData),
 		contentType: "application/json; charset=UTF-8",
 		dataType: "json",
-		success: res => console.log(res)
+		success: res => putStatusMsg(res)
 	});
 	e.preventDefault();
 });
 
 });
+
+function putStatusMsg(res) {
+	let buttonType;
+	if (res.status === "success") {
+		buttonType = "success";
+	} else {
+		buttonType = "danger";
+	}
+
+	$("#status-group").append(`<button type="button" class="btn btn-${buttonType}" disabled>${res.message}</button>`);
+	console.log(res);
+}
