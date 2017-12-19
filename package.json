@@ -5,7 +5,9 @@
 	"main": "server.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"init_data": "./init_data.sh"
+		"sudo_permission": "chmod 777 init_data.sh && chmod 777 create_backup.sh",
+		"init_data": "npm run sudo_permission && ./init_data.sh",
+		"create_backup": "./create_backup.sh"
 	},
 	"keywords": [
 		"guitar",

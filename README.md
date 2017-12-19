@@ -28,7 +28,7 @@ $ npm install
 
 You'll need to initialise the files that will store your music practice data. The first step is to create the files with a template in them by running
 ```
-$ ./init_data.sh
+$ npm run init_data
 ```
 You'll now notice that a directory `data` has been created, with various `.json` files in it. On opening these files, you'll see empty fields marked by `"..."` such as in the file `songs.json`:
 ```
@@ -91,7 +91,7 @@ For every practice session, fill in the details of that session in the form. On 
 
 If you want to back up your data, run
 ```
-$ ./create_backup.sh
+$ npm run create_backup
 ```
 while in the app's main directory. This will create a `data.backup` directory with all your data files that won't be overwritten until the next time you run `./create_backup.sh`.
 
