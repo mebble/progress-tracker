@@ -3,7 +3,6 @@
 dataDir="data"
 songs="${dataDir}/songs.json"
 exercises="${dataDir}/exercises.json"
-chords="${dataDir}/chords.json"
 sessions="${dataDir}/sessions.json"
 replace="s,\s\s\s\s,\t,g"
 
@@ -50,17 +49,6 @@ if [ ! -f "$exercises" ]; then
 	EOF
 else
 	echo_file_exists "$exercises"
-fi
-
-# init chords.json
-if [ ! -f "$chords" ]; then
-	cat <<- EOF | sed "$replace" > "$chords"
-	[
-	    ["...", "...", "..."]
-	]
-	EOF
-else
-	echo_file_exists "$chords"
 fi
 
 # init sessions.json
