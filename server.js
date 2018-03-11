@@ -4,9 +4,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const daily = require('./scripts/daily');
 
-// data paths
-const sessionsPath = './data/sessions.json';
-
 // load json data
 const songs = require('./data/songs.json');
 const exercises = require('./data/exercises.json');
@@ -27,7 +24,7 @@ app.post('/add/daily-session', (req, res) => {
 	console.log('Request body:\n' + JSON.stringify(req.body, null, 4));
 
 	try {
-		daily.update(req.body, sessionsPath);
+		daily.update(req.body);
 
 		console.log('Write successful!');
 		res.contentType('json');
